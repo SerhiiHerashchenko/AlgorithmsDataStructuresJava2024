@@ -1,4 +1,4 @@
-package Java.Lab2_ArrayList;
+package Lab2_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
