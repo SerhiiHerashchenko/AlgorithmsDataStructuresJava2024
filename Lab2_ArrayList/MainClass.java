@@ -14,7 +14,7 @@ class MyComparator<T> implements Comparator<T>{
     }
 }
 
-class MainClass<T>{
+class MainClass{
     public static void main(String[] args){
         // #2
         System.out.println("TASK 2:");
