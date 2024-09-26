@@ -13,40 +13,24 @@ public class MainClass {
         head2.next.next = new ListNode(4);
 
         ListNode answer = new Solution().mergeTwoLists(head1, head2);
-        printListNode(answer);
+        System.out.println(answer.toString());
 
         //Example 2
         System.out.print("Ex 2:");
 
-        head1 = null;
-        head2 = null;
+        head1 = new ListNode();
+        head2 = new ListNode();
 
         answer = new Solution().mergeTwoLists(head1, head2);
-        printListNode(answer);
+        System.out.println(answer.toString());
 
         //Example 3
         System.out.print("Ex 3:");
 
-        head1 = null;
+        head1 = new ListNode(0);
         head2 = new ListNode();
 
         answer = new Solution().mergeTwoLists(head1, head2);
-        printListNode(answer);
-    }
-
-    public static void printListNode(ListNode head){
-        if (head == null) {
-            System.out.println("[]");
-            return;
-        }
-        else{
-            System.out.print("[");
-            while(head.next != null){
-                System.out.print(head.val +",");
-                head = head.next;
-            }
-            System.out.println(head.val +"]");
-            return;
-        }
+        System.out.println(answer.toString());
     }
 }
