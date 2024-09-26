@@ -31,6 +31,6 @@ public class MainClass {
         head2 = new ListNode();
 
         answer = new Solution().mergeTwoLists(head1, head2);
-        System.out.println(answer.toString());
+        System.out.println(answer);
     }
 }
