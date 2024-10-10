@@ -1,7 +1,6 @@
 package Lab4_HashMap;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class MainClass {
     public static void main(String[] args) {
@@ -20,7 +19,6 @@ public class MainClass {
         restaurant.addOrder(order1, "Hulio");
         restaurant.addOrder(order2, "Hulio");
 
-        HashMap<String, Order> orders;
-        System.out.println(orders.toString());
+        System.out.println(restaurant.toString());
     }
 }
