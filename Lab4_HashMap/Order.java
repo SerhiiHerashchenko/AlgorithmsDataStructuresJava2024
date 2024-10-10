@@ -11,13 +11,19 @@ public class Order {
         this.orderNumber = orderNumber;
         this.dishes = dishes;
     }
+    public Order(){
+        this.customerName = "";
+        this.orderNumber = -1;
+        this.dishes = new ArrayList<String>();
+    }
 
-    public int GetOrderNumber(Order order){
+    public int GetOrderNumber(){
         return this.orderNumber;
     }
 
     @Override
-    public int hashCode(){
-        return orderNumber;
+    public String toString(){
+        final String s = customerName + ": " + dishes.toString() + " \nOrder number:" + orderNumber;
+        return s;
     }
 }
