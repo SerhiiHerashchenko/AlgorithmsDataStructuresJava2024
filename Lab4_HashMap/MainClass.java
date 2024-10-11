@@ -95,10 +95,10 @@ public class MainClass {
         System.out.println(restaurant.toString());
 
         ArrayList<String> dishes11 = new ArrayList<>();
-        dishes10.add("гамбургер");
-        dishes10.add("кока-кола");
+        dishes11.add("гамбургер");
+        dishes11.add("кока-кола");
 
-        Order order11 = new Order(11, "Dmitry", dishes10);
+        Order order11 = new Order(11, "Dmitry", dishes11);
 
         restaurant.add(order11, "Hulio11");
     }
