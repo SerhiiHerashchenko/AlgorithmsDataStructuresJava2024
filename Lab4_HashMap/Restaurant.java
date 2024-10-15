@@ -18,32 +18,19 @@ public class Restaurant {
         orders.put(waiterName, order);
     }
 
-    public void remove(int orderNumber){
-        final Set<Map.Entry<String,Order>> s = orders.entrySet();
-        Order neededOrder = new Order();
-        String neededWaiter = "";
+    public void removeOrder(int orderNumber){
+        final String neededWaiter = getWaiter(orderNumber);
 
-        for (Order order : orders.values()) {
-            if (order.GetOrderNumber() == orderNumber) {
-                neededOrder = order;
-                break;
-            }
-        }
-
-        if (neededOrder.GetOrderNumber() == -1) {
-            System.out.println("Order marked with this number doesn't exist");
-            return;
-        }
-
-        for (Entry<String,Order> entry : s) {
-            if (neededOrder.equals(entry.getValue())) {
-                neededWaiter = entry.getKey();
-            }
-        }
-        orders.remove(neededWaiter, neededOrder);
+        orders.remove(neededWaiter);
     }
 
-    public Order get(int orderNumber){
+    public Order getOrder(int orderNumber){
+        final String neededWaiter = getWaiter(orderNumber);
+
+        return orders.get(neededWaiter);
+    } 
+
+    private String getWaiter(int orderNumber){
         final Set<Map.Entry<String,Order>> s = orders.entrySet();
         Order neededOrder = new Order();
         String neededWaiter = "";
@@ -64,7 +51,7 @@ public class Restaurant {
                 neededWaiter = entry.getKey();
             }
         }
-        return orders.get(neededWaiter);
+        return neededWaiter;
     } 
 
     @Override
@@ -75,7 +62,7 @@ public class Restaurant {
             waiters.add(entry.getKey());
         }
         for (String waiter : waiters) {
-            s += (waiter + ":\n" + orders.get(waiter).toString() + "\n");
+            s += (waiter + ":\n" + orders.get(waiter).toString() + "\n\n");
         }
         return s;
     }

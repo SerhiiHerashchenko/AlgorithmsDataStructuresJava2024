@@ -92,7 +92,7 @@ public class MainClass {
         restaurant.add(order9, "Hulio9");
         restaurant.add(order10, "Hulio10");
 
-        System.out.println(restaurant.toString());
+        System.out.print(restaurant.toString());
 
         ArrayList<String> dishes11 = new ArrayList<>();
         dishes11.add("гамбургер");
