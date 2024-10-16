@@ -30,6 +30,10 @@ public class Restaurant {
     } 
 
     private String getWaiter(int orderNumber){
+        if (orderNumber < 1 && orderNumber > orders.size()) {
+            return null;
+        }
+
         final Set<Map.Entry<String,Order>> s = orders.entrySet();
         Order neededOrder = new Order();
         String neededWaiter = "";
@@ -39,10 +43,6 @@ public class Restaurant {
                 neededOrder = order;
                 break;
             }
-        }
-
-        if (neededOrder.GetOrderNumber() == -1) {
-            return null;
         }
 
         for (Entry<String,Order> entry : s) {
