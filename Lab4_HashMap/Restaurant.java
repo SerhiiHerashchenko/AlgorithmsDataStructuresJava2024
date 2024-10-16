@@ -24,7 +24,7 @@ public class Restaurant {
     }
 
     public Order getOrder(int orderNumber){
-        final String neededWaiter = getWaiter(orderNumber);
+        String neededWaiter = getWaiter(orderNumber);
 
         return orders.get(neededWaiter);
     } 
