@@ -8,7 +8,6 @@ import java.util.Set;
 
 public class Restaurant {
     private final HashMap<String, Order> orders = new HashMap<String, Order>();
-    private final Set<Map.Entry<String, Order>> waiters_orders = orders.entrySet();
 
     public void add(Order order, String waiterName){
         if (orders.size()>=10) {
@@ -57,6 +56,7 @@ public class Restaurant {
     @Override
     public String toString(){
         String s = "";
+        final Set<Map.Entry<String,Order>> waiters_orders = orders.entrySet();
         final ArrayList<String> waiters = new ArrayList<>();
         for (Entry<String,Order> entry : waiters_orders) {
             waiters.add(entry.getKey());
