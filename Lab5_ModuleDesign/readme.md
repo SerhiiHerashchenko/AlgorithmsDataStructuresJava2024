@@ -4,7 +4,7 @@
 3. **DataProcessing**
 4. **GameProcessing**
 
-1.**Computer module** consists of 2 structures:
+1. **Computer module** consists of 2 structures:
     * **Computer interface**, that states basic functionality of ai player, more precisely, the ability to pick the number and check player's move.
     * **ComputerImpl class** that implements previous interface. This class implements methods wich give us posibility to pick a number, check the player's move, and check player's position (winner/ continue to play).
 2. **Player module** has also 2 structures:
