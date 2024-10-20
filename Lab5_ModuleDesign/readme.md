@@ -19,5 +19,5 @@
         - **OutputDataImpl class** implements method from previous interface, and allows us to return data collected by InputDataConsole method.
  **GameProcessing** is a main class wich implements game process.
 
->[!IMPORTENT]
+>[!IMPORTANT]
 >Current problem of implementation: exeption of the empty input after the first player's move.
