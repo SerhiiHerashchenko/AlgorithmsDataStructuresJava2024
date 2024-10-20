@@ -20,7 +20,7 @@
     - **Output module**:
         - **OutputData interface**, that states basic method of data returning.
         - **OutputDataImpl class** implements method from previous interface, and allows us to return data collected by InputDataConsole method.
- **GameProcessing** is a main class wich implements game process.
+- **GameProcessing** is a main class wich implements game process.
 
 >[!IMPORTANT]
 >Current problem of implementation: exeption of the empty input after the first player's move.
