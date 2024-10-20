@@ -1,8 +1,11 @@
+# Guess a number game
 **The game consists of 4 modules:**
 1. **Computer**
 1. **Player**
 1. **DataProcessing**
 1. **GameProcessing**
+
+### Current game structure
 
 - **Computer module** consists of 2 structures:
     - **Computer interface**, that states basic functionality of ai player, more precisely, the ability to pick the number and check player's move.
