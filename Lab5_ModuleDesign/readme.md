@@ -19,5 +19,5 @@ The game consists of 5 modules:
         * OutputDataImpl class implements method from previous interface, and allows us to return data collected by InputDataConsole method.
 4. GameProcessing is a main class wich implements game process.
 
-[!WARNING]
-Current problem of implementation: exeption of the empty input after the first player's move.
+>[!WARNING]
+>Current problem of implementation: exeption of the empty input after the first player's move.
