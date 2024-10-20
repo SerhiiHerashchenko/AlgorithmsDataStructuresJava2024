@@ -2,7 +2,7 @@ package Lab5_ModuleDesign.Computer;
 
 
 import Lab5_ModuleDesign.DataProcessing.Input.InputData;
-import Lab5_ModuleDesign.DataProcessing.Output.OutputDataConsole;
+import Lab5_ModuleDesign.DataProcessing.Output.OutputDataImpl;
 
 public class ComputerImpl implements Computer{
     int givenNumber;
@@ -15,7 +15,7 @@ public class ComputerImpl implements Computer{
 
     @Override
     public void checkPlayersMove(InputData input){
-        String data = new OutputDataConsole().getData(input);
+        String data = new OutputDataImpl().getData(input);
         int playersNum = Integer.parseInt(data);
 
         if (givenNumber == playersNum) {
