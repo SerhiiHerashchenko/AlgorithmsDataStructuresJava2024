@@ -1,4 +1,4 @@
-package Lab5_ModuleDesign;
+package Lab5_ModuleDesign.GameProcessing;
 
 import Lab5_ModuleDesign.Computer.ComputerImpl;
 import Lab5_ModuleDesign.Player.PlayerImpl;
@@ -10,7 +10,7 @@ public class GameProcessing {
         computer.pickANumber();
         System.out.println("The game's started. The number's guessed. Your move!");
         while (computer.doesPlayerWin() != true) {
-            computer.checkPlayersMove(player.makeMove());
+            computer.checkPlayersMove(player.makeMoveConsole());
         }
     }
 }
