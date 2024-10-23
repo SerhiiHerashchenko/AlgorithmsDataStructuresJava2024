@@ -1,8 +1,7 @@
-package Lab5_ModuleDesign.Computer;
+package Lab5_ModuleDesign.src.Computer;
 
-
-import Lab5_ModuleDesign.DataProcessing.Input.InputData;
-import Lab5_ModuleDesign.DataProcessing.Output.OutputDataImpl;
+import Lab5_ModuleDesign.src.DataProcessing.Checker.CheckDataImpl;
+import Lab5_ModuleDesign.src.DataProcessing.Input.InputData;
 
 public class ComputerImpl implements Computer{
     int givenNumber;
@@ -15,17 +14,17 @@ public class ComputerImpl implements Computer{
 
     @Override
     public void checkPlayersMove(InputData input){
-        String data = new OutputDataImpl().getData(input);
-        int playersNum = Integer.parseInt(data);
-
-        if (givenNumber == playersNum) {
-            System.out.println("Finally... You've just figured out given number. Well, that didn't take a century");
+        final CheckDataImpl checker = new CheckDataImpl();
+        String moveCondition = checker.checkData(input, givenNumber);
+        if (moveCondition == "e") {
+            System.out.println("Finally... You've just figured out given number. Well, it didn't take a century");
             playerWin = true;
+            input.stopCollecting();
         }
-        else if(givenNumber < playersNum){
+        else if(moveCondition == "g"){
             System.out.println("Your number is greater than number that i guessed. Try again!");
         }
-        else if(givenNumber > playersNum){
+        else if(moveCondition == "l"){
             System.out.println("Your number is smaller than number that i guessed. Try again!");
         }
     }
