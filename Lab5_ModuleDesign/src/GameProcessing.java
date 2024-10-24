@@ -1,18 +1,18 @@
-package Lab5_ModuleDesign.src.GameProcessing;
+package Lab5_ModuleDesign.src;
 
 import Lab5_ModuleDesign.src.Computer.ComputerImpl;
-import Lab5_ModuleDesign.src.Player.PlayerImpl;
+import Lab5_ModuleDesign.src.Player.ConsolePlayer;
 
 public class GameProcessing {
     public static void main(String[] args) {
-        final PlayerImpl player = new PlayerImpl();
+        final ConsolePlayer player = new ConsolePlayer();
         final ComputerImpl computer = new ComputerImpl();
 
-        computer.pickANumber();
+        computer.pick(5);
         System.out.println("The game's started. The number's guessed. Your move!");
 
         while (computer.doesPlayerWin() != true) {
-            computer.checkPlayersMove(player.makeMoveConsole());
+            computer.checkPlayersMove(player.makeMove());
         }
     }
 }

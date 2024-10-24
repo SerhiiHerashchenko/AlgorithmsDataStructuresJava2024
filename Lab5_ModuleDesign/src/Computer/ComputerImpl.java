@@ -1,21 +1,27 @@
 package Lab5_ModuleDesign.src.Computer;
 
-import Lab5_ModuleDesign.src.DataProcessing.Checker.CheckDataImpl;
+import java.util.InputMismatchException;
+
 import Lab5_ModuleDesign.src.DataProcessing.Input.InputData;
+import Lab5_ModuleDesign.src.DataProcessing.ProcessData.ProcessDataConsole;
 
 public class ComputerImpl implements Computer{
     int givenNumber;
     boolean playerWin = false;
 
     @Override
-    public void pickANumber(){
-        givenNumber = (int)(Math.random() * 100) + 1;
+    public <T> void pick(T data){
+        if (data instanceof Integer) {
+            givenNumber = (int)(Math.random() * 100) + 1;  
+        }
+        else{
+            throw new InputMismatchException();
+        }
     }
 
     @Override
     public void checkPlayersMove(InputData input){
-        final CheckDataImpl checker = new CheckDataImpl();
-        String moveCondition = checker.checkData(input, givenNumber);
+        String moveCondition = new ProcessDataConsole().getData(input);
         if (moveCondition == "e") {
             System.out.println("Finally... You've just figured out given number. Well, it didn't take a century");
             playerWin = true;

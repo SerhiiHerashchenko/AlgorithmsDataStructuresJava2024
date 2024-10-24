@@ -1,7 +1,7 @@
-package Lab5_ModuleDesign.src.DataProcessing.GetData;
+package Lab5_ModuleDesign.src.DataProcessing.ProcessData;
 
 import Lab5_ModuleDesign.src.DataProcessing.Input.InputData;
 
-public interface GetData {
+public interface ProcessData {
     public String getData(InputData input); 
 }
