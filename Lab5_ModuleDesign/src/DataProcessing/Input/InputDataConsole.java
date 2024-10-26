@@ -11,9 +11,4 @@ public class InputDataConsole implements InputData {
         console = new Scanner(System.in);
         data = console.nextLine();
     }
-
-    @Override
-    public void stopCollecting(){
-        console.close();
-    }
 }

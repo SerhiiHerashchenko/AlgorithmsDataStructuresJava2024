@@ -21,16 +21,16 @@ public class ComputerImpl implements Computer{
 
     @Override
     public void checkPlayersMove(InputData input){
-        String moveCondition = new ProcessDataConsole().getData(input);
-        if (moveCondition == "e") {
+        String moveCondition1 = new ProcessDataConsole().getData(input);
+        int moveCondition = Integer.parseInt(moveCondition1);
+        if (moveCondition == givenNumber) {
             System.out.println("Finally... You've just figured out given number. Well, it didn't take a century");
             playerWin = true;
-            input.stopCollecting();
         }
-        else if(moveCondition == "g"){
+        else if(moveCondition > givenNumber){
             System.out.println("Your number is greater than number that i guessed. Try again!");
         }
-        else if(moveCondition == "l"){
+        else if(moveCondition < givenNumber){
             System.out.println("Your number is smaller than number that i guessed. Try again!");
         }
     }
