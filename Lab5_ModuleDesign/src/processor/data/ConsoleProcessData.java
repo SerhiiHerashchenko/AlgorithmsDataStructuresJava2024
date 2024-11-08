@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import Lab5_ModuleDesign.src.processor.input.InputData;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
 
-public class ProcessDataConsole implements ProcessData {
+public class ConsoleProcessData implements ProcessData {
     @Override
     public String getData(InputData input){
         if (input instanceof ConsoleInputData) {
