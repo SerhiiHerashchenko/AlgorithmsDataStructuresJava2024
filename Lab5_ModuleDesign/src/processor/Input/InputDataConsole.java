@@ -1,8 +1,8 @@
-package Lab5_ModuleDesign.src.DataProcessing.Input;
+package Lab5_ModuleDesign.src.processor.input;
 
 import java.util.Scanner;
 
-public class InputDataConsole implements InputData {
+public class ConsoleInputData implements InputData {
     private Scanner console;
     public String data;
 

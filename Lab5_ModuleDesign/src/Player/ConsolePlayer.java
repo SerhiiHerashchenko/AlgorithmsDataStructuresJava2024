@@ -1,10 +1,10 @@
-package Lab5_ModuleDesign.src.Player;
+package Lab5_ModuleDesign.src.player;
 
-import Lab5_ModuleDesign.src.DataProcessing.Input.InputData;
-import Lab5_ModuleDesign.src.DataProcessing.Input.InputDataConsole;
+import Lab5_ModuleDesign.src.processor.input.InputData;
+import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
 
 public class ConsolePlayer implements Player {
-    private final InputData data = new InputDataConsole();
+    private final InputData data = new ConsoleInputData();
     private String name;
     private String id;
 
