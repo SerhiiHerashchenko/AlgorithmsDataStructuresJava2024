@@ -1,7 +1,8 @@
 package Lab5_ModuleDesign.src.processor.game;
 
-public enum EGL {
+public enum EGLU {
     Equels,
     Greater,
-    Less;
+    Less,
+    Uncomparable;
 }
