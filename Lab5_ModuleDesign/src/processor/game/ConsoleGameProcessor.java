@@ -4,7 +4,7 @@ import Lab5_ModuleDesign.src.processor.input.InputData;
 
 import Lab5_ModuleDesign.src.picker.NumberPicker;
 import Lab5_ModuleDesign.src.player.Player;
-import Lab5_ModuleDesign.src.processor.data.ConsoleProcessData;
+import Lab5_ModuleDesign.src.processor.data.StringProcessData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
 import Lab5_ModuleDesign.src.processor.comparator.NumberComparator;
@@ -22,16 +22,16 @@ public class ConsoleGameProcessor implements GameProcessor{
     public <T> void checkPlayersMove(InputData input, T data){
         if (input instanceof ConsoleInputData && data instanceof Integer) {
             int givenNumber = (int)data;
-            String stringPlayersMove = new ConsoleProcessData().getData(input);
+            String stringPlayerMove = new StringProcessData().getData(input);
             Object playerMove;
             try {
-                playerMove = Integer.parseInt(stringPlayersMove);
+                playerMove = Integer.parseInt(stringPlayerMove);
             } catch (NumberFormatException e) {
-                playerMove = stringPlayersMove;
+                playerMove = stringPlayerMove;
             }
             int magicNum = rollTheDice();
 
-            if ((magicNum == 7 || magicNum == 3) && magicCounter < 3) { magicCounter++; }
+            if (playerMove instanceof Integer && magicCounter < 3 && (magicNum == 7 || magicNum == 3)) { magicCounter++; }
 
             EGLU moveCondition = (new NumberComparator()).compare(givenNumber, playerMove, magicNum, magicCounter);
 
@@ -40,10 +40,10 @@ public class ConsoleGameProcessor implements GameProcessor{
             }
             else if (moveCondition == EGLU.Equels) {
                 BannerReader banner = new BannerReader("Lab5_ModuleDesign\\src\\banners\\Winner_Banner.txt");
-                String message = (new ConsoleProcessData()).getData(banner);
+                String message = (new StringProcessData()).getData(banner);
                 
                 System.out.print(message + "\nFinally... You've just figured out given number. Well, it didn't take a century! \n"
-                    + "Your name: " + currentPlayer.getName() + "\nYour ID:" + currentPlayer.getId());
+                    + "Your name: " + currentPlayer.getName() + "\nYour ID: " + currentPlayer.getId());
                 playerWin = true;
             }
             else if(moveCondition == EGLU.Greater){

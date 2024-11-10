@@ -6,7 +6,7 @@ import Lab5_ModuleDesign.src.processor.input.InputData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
 
-public class ConsoleProcessData implements ProcessData {
+public class StringProcessData implements ProcessData {
     @Override
     public String getData(InputData input){
         if (input instanceof ConsoleInputData) {
