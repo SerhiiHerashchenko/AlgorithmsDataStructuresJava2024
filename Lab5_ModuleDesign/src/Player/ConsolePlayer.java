@@ -1,7 +1,7 @@
 package Lab5_ModuleDesign.src.player;
 
-import Lab5_ModuleDesign.src.processor.InputData;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
+import Lab5_ModuleDesign.src.processor.input.InputData;
 
 public class ConsolePlayer implements Player {
     private final InputData data = new ConsoleInputData();

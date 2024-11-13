@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import Lab5_ModuleDesign.src.processor.InputData;
-
 public class BannerReader implements InputData {
     String filePath;
     BufferedReader reader;
