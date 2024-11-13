@@ -1,6 +1,6 @@
 package Lab5_ModuleDesign.src.player;
 
-import Lab5_ModuleDesign.src.processor.input.InputData;
+import Lab5_ModuleDesign.src.processor.InputData;
 
 public interface Player {
     public InputData makeMove();

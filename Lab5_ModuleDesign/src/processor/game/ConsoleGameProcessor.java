@@ -1,12 +1,11 @@
 package Lab5_ModuleDesign.src.processor.game;
 
-import Lab5_ModuleDesign.src.processor.input.InputData;
-
 import Lab5_ModuleDesign.src.picker.NumberPicker;
 import Lab5_ModuleDesign.src.player.Player;
 import Lab5_ModuleDesign.src.processor.data.StringProcessData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
+import Lab5_ModuleDesign.src.processor.InputData;
 import Lab5_ModuleDesign.src.processor.comparator.NumberComparator;
 
 public class ConsoleGameProcessor implements GameProcessor{
