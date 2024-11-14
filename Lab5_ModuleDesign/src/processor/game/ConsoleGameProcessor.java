@@ -1,7 +1,7 @@
 package Lab5_ModuleDesign.src.processor.game;
 
-import Lab5_ModuleDesign.src.Player.Player;
 import Lab5_ModuleDesign.src.picker.NumberPicker;
+import Lab5_ModuleDesign.src.player.Player;
 import Lab5_ModuleDesign.src.processor.data.StringProcessData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
@@ -31,7 +31,7 @@ public class ConsoleGameProcessor implements GameProcessor{
             int magicNum = rollTheDice();
 
             boolean ifLieIsAllowed = magicCounter < 3 && (magicNum == 7 || magicNum == 3);
-            
+
             if (playerMove instanceof Integer && ifLieIsAllowed) { magicCounter++; }
 
             EGLU moveCondition = (new NumberComparator()).compare(givenNumber, playerMove, magicNum, magicCounter);
