@@ -1,7 +1,7 @@
 package Lab5_ModuleDesign.src.processor;
 
 import Lab5_ModuleDesign.src.picker.Picker;
-import Lab5_ModuleDesign.src.player_.Player;
+import Lab5_ModuleDesign.src.player.Player;
 import Lab5_ModuleDesign.src.processor.game.GameProcessor;
 
 public class Game{

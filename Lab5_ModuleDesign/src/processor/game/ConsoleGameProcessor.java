@@ -1,7 +1,7 @@
 package Lab5_ModuleDesign.src.processor.game;
 
 import Lab5_ModuleDesign.src.picker.NumberPicker;
-import Lab5_ModuleDesign.src.player_.Player;
+import Lab5_ModuleDesign.src.player.Player;
 import Lab5_ModuleDesign.src.processor.data.StringProcessData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
