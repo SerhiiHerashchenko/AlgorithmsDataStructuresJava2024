@@ -10,7 +10,7 @@ public class NumberComparator implements Comparator {
             int playerNumber = (int)playerEntity;
             int magicNumber = (int)magicEntity;
             if(magicCounter >= 3 || (magicNumber != 7 && magicNumber != 3)) {
-                if(givenNumber == playerNumber) { return EGLU.Equels; }
+                if(givenNumber == playerNumber) { return EGLU.Equals; }
                 else if(givenNumber > playerNumber) { return EGLU.Less; }
                 else { return EGLU.Greater; }
             }

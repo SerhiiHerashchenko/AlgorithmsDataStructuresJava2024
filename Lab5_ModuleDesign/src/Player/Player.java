@@ -1,4 +1,4 @@
-package Lab5_ModuleDesign.src.player;
+package Lab5_ModuleDesign.src.Player;
 
 import Lab5_ModuleDesign.src.processor.input.InputData;
 

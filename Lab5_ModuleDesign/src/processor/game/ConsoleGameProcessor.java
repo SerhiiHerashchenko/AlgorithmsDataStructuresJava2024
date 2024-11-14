@@ -1,7 +1,7 @@
 package Lab5_ModuleDesign.src.processor.game;
 
+import Lab5_ModuleDesign.src.Player.Player;
 import Lab5_ModuleDesign.src.picker.NumberPicker;
-import Lab5_ModuleDesign.src.player.Player;
 import Lab5_ModuleDesign.src.processor.data.StringProcessData;
 import Lab5_ModuleDesign.src.processor.input.BannerReader;
 import Lab5_ModuleDesign.src.processor.input.ConsoleInputData;
@@ -37,8 +37,8 @@ public class ConsoleGameProcessor implements GameProcessor{
             if (moveCondition == EGLU.Uncomparable) {
                 System.out.println(this.currentPlayer.getName() + ", you've just written something that is not a number, thus try again!");
             }
-            else if (moveCondition == EGLU.Equels) {
-                BannerReader banner = new BannerReader("Lab5_ModuleDesign\\src\\banners\\Winner_Banner.txt");
+            else if (moveCondition == EGLU.Equals) {
+                BannerReader banner = new BannerReader("Lab5_ModuleDesign\\src\\resources\\Winner_Banner.txt");
                 String message = (new StringProcessData()).getData(banner);
                 
                 System.out.print(message + "\nFinally... You've just figured out given number. Well, it didn't take a century! \n"
