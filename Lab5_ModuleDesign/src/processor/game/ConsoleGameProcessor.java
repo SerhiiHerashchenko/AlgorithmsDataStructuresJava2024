@@ -30,7 +30,9 @@ public class ConsoleGameProcessor implements GameProcessor{
             }
             int magicNum = rollTheDice();
 
-            if (playerMove instanceof Integer && magicCounter < 3 && (magicNum == 7 || magicNum == 3)) { magicCounter++; }
+            boolean ifLieIsAllowed = magicCounter < 3 && (magicNum == 7 || magicNum == 3);
+            
+            if (playerMove instanceof Integer && ifLieIsAllowed) { magicCounter++; }
 
             EGLU moveCondition = (new NumberComparator()).compare(givenNumber, playerMove, magicNum, magicCounter);
 
